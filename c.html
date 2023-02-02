@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    /* background-color: rgb(0, 0, 0); */
+    background-image: url(1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.login {
+    width: 330px;
+    border-radius: 10px;
+    padding: 40px;
+    margin: auto;
+    box-shadow: -3px -3px 9px #aaa9a9a2, 3px 3px 7px rgb(147 149 151 / 67%);
+    margin-top: 130px;
+}
+.login h2{
+    color: rgb(5, 0, 0);
+}
+.or{
+    color: rgb(0, 1, 1);
+}
+.set input {
+    height: 100%;
+    width: 100%;
+    padding-left: 45px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    color: #0a0101;
+    border: 1px solid rgba(255, 255, 255, 0.438);
+    border-radius: 8px;
+    background: rgba(105, 105, 105, 0);
+}
+.login .set {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.set span {
+    position: absolute;
+    width: 50px;
+    line-height: 50px;
+    color: #0a0000;
+}
+.set span{
+    font-weight: 900;
+}
+button {
+    margin: 25px 0 0 0;
+    width: 100%;
+    height: 50px;
+    color: rgb(7, 1, 1);
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.438);
+    border-radius: 8px;
+    background: rgba(105, 105, 105, 0);
+    margin-top: 40px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.login .or{
+    color: rgba(11, 3, 3, 0.733);
+    margin-top: 9px;
+  }
+  
+  .icon-button{
+    margin-top: 15px;
+  }
+  
+  .icon-button span{
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: rgba(1, 10, 18, 0.795);
+    border-radius: 5px;
+    line-height: 30px;
+    background: rgba(255, 255, 255, 0.164);
+    backdrop-filter: blur(80px);
+  }
+  
+  .icon-button span.facebook{
+    margin-right: 17px;
+  }
+  
+  button:hover,
+  .icon-button span:hover{
+    background-color: #babecc8c;
+  }
+ form .login{
+     backdrop-filter: blur(3px);
+ }
+.icon-button a{
+    text-decoration: none;
+}
+.terms span{
+    color: #ffffff;
+
+}
+.terms a{
+    color: rgb(8, 0, 0);
+}
+.newa span a{
+    color: rgb(0, 7, 0);
+}
+        </style>
+    </head>
+    <body>
+    <form> 
+    <div class="login">
+        <div id="error" style="color: red;"></div>
+        <h2>Login From</h2>
+        <div class="set">
+            <span class="fa fa-user"></span>
+            <input type="text" id="mail" placeholder="Email Id" required>
+        </div>
+        <br>
+        <div class="set">
+            <span class="fa fa-lock"></span>
+            <input type="password" id="pass" placeholder="Password" required>
+        </div>
+        <br>
+        <div class="terms">
+            <input type="checkbox" required>
+            <span>Agree With <a href="#">terms and conditions</a></span>
+
+        </div>
+        <div>
+            <button onclick="login()">Log in</button>
+        </div>
+        <br>
+        <div class="newa">
+            <span><a href="#">Create new account</a></span>
+        </div>
+        <div class="or">Or</div>
+        <br>
+        <div>
+            <span style="color: rgb(195, 201, 205);">continue with...</span>
+        </div>
+        <div class="icon-button"> 
+
+            <a href="#"><span class="facebook"><i class="fa fa-facebook"></i>  Facebook</span></a>
+        
+            <a href="#"><span><i class="fa fa-google"></i>  Google</span></a>
+        
+         </div>
+    </div>
+    </form>
+    </body>
+
+    <script>
+        let id = "pushp";
+        let pass = 1234;
+        function login() {
+          let x = document.getElementById("mail").value;
+          document.getElementById("mail").innerHTML = x;
+          let y = document.getElementById("pass").value;
+          document.getElementById("pass").innerHTML = y;
+          if (x == id && y == pass) {
+            location.href = "\index1.html";
+          } else {
+            var error = document.getElementById("error");
+            error.innerHTML = "Your mail or password is wrong.";
+            console.log("Error:Your mail or password is wrong.");
+          }
+        }
+      </script>
+</html>
